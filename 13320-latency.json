@@ -2,6 +2,7 @@
   "__inputs": [],
   "__requires": [
     {
+      
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
