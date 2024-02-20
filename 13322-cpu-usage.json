@@ -82,7 +82,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (label_appId,label_envId,label_rollouts_pod_template_hash) (\n    label_replace(\n    max(\n    kube_pod_labels{label_appId=\"$app\",label_envId=\"$env\"}) by (label_app,label_env, pod, label_rollouts_pod_template_hash)\n    ,\"label_rollouts_pod_template_hash\",  \"$1(new)\", \"label_rollouts_pod_template_hash\",  \"($new_rollout_pod_template_hash)\")\n    *\n    on(pod)\n    group_right(label_appId, label_envId, label_rollouts_pod_template_hash)\n    label_replace(\n       sum by(pod) (\n           rate(container_cpu_usage_seconds_total{container!=\"POD\",image!=\"\",job=\"kubelet\"}[5m])\n       ), \"pod\", \"$1\",\"pod\", \"(.+)\"\n    )\n)",
+          "expr": "sum byyyyyyyyyyyyyyyyyyyyyyyyyyy (label_appId,label_envId,label_rollouts_pod_template_hash) (\n    label_replace(\n    max(\n    kube_pod_labels{label_appId=\"$app\",label_envId=\"$env\"}) by (label_app,label_env, pod, label_rollouts_pod_template_hash)\n    ,\"label_rollouts_pod_template_hash\",  \"$1(new)\", \"label_rollouts_pod_template_hash\",  \"($new_rollout_pod_template_hash)\")\n    *\n    on(pod)\n    group_right(label_appId, label_envId, label_rollouts_pod_template_hash)\n    label_replace(\n       sum by(pod) (\n           rate(container_cpu_usage_seconds_total{container!=\"POD\",image!=\"\",job=\"kubelet\"}[5m])\n       ), \"pod\", \"$1\",\"pod\", \"(.+)\"\n    )\n)",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
