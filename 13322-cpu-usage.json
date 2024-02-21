@@ -4,7 +4,6 @@
     {
       "type": "grafana",
       "id": "grafana",
-      
       "name": "Grafana",
       "version": "7.0.3"
     },
